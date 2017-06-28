@@ -21,3 +21,18 @@
 
 en:
   hello: "Hello world"
+  music_web: "Listening Music"
+  listening_music: "Listening Music"
+  about: "About"
+  this_website: "This Website Is Made By Me"
+  welcome: "Welcome to the Music App"
+  homepage: "This is homepage of Ruby on Rails application"
+  signup: "Sign up now!"
+  help: "Help"
+  home: "Home"
+  log_in: "Log in"
+  homes:
+    help:
+      help: "This is help page!"
+    about:
+      about: "This is about page!"
