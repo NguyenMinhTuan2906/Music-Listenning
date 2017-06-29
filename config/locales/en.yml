@@ -13,6 +13,7 @@ en:
   error: "error"
   log_out: "Log out"
   sign_up_now: "Sign up now!"
+  remember: "Remember me?"
   homes:
     help:
       help: "This is help page!"
