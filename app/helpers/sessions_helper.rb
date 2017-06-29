@@ -36,4 +36,24 @@ module SessionsHelper
     session.delete :user_id
     @current_user = nil
   end
+
+  def logged_in_user
+    return if logged_in?
+    store_location
+    flash[:danger] = t "log_in_please"
+    redirect_to login_url
+  end
+
+  def redirect_back_or
+    if session[:forwarding_url]
+      redirect_to session[:forwarding_url]
+    else
+      redirect_to root_path
+    end
+    session.delete(:forwarding_url)
+  end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
 end

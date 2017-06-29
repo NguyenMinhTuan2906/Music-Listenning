@@ -14,6 +14,11 @@ en:
   log_out: "Log out"
   sign_up_now: "Sign up now!"
   remember: "Remember me?"
+  none: "There is no user that matches this id!"
+  can_not: "You do not have permission to visit this page!"
+  log_in_please: "Please log in first!"
+  prevent_signup: "You can sign up when logged in!"
+  not_admin: "Only Administrator can visit this page!"
   homes:
     help:
       help: "This is help page!"
@@ -30,6 +35,10 @@ en:
       title: "Sign Up"
     create:
       welcome: "Welcome to Music App"
+    edit:
+      title: "Edit profile"
+    update:
+      success: "Profile has been successfully updated!"
   shared:
     error_messages:
       errors_contain: "The form contain"
