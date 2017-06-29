@@ -1,5 +1,4 @@
 en:
-  hello: "Hello world"
   music_web: "Listening Music"
   listening_music: "Listening Music"
   about: "About"
@@ -19,6 +18,8 @@ en:
   log_in_please: "Please log in first!"
   prevent_signup: "You can sign up when logged in!"
   not_admin: "Only Administrator can visit this page!"
+  profile: "Profile"
+  settings: "Settings"
   homes:
     help:
       help: "This is help page!"
@@ -54,3 +55,19 @@ en:
       welcome: "Welcome back, "
     destroy:
       bye: "Good bye. See you again!"
+  layouts:
+    admin:
+      admin: "Admin Page"
+      song: "Manager Songs"
+      user: "Manager Users"
+      artist: "Manager Artists"
+      genre: "Manager Genres"
+  admin:
+    homes:
+      index:
+        admin: "Admin Homepage"
+        artists: "Artists"
+        users: "Users"
+        genres: "Genres"
+        songs: "Songs"
+        view_details: "View details"

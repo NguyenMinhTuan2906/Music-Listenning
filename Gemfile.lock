@@ -103,6 +103,8 @@ GEM
     execjs (2.7.0)
     fabrication (2.16.1)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     formatador (0.2.5)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -313,7 +315,7 @@ DEPENDENCIES
   bcrypt
   better_errors
   binding_of_caller
-  bootstrap-sass (= 3.3.6)
+  bootstrap-sass
   bootstrap-will_paginate (= 0.0.10)
   brakeman
   bundler-audit
@@ -323,6 +325,7 @@ DEPENDENCIES
   database_cleaner
   eslint-rails
   fabrication
+  font-awesome-rails
   guard-rspec
   jbuilder (~> 2.5)
   jquery-rails

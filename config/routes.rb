@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   resources :users
+
+  namespace :admin do
+    root "homes#index"
+    resources :users, only: [:show, :index, :destroy]
+  end
 end

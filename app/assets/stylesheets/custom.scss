@@ -8,6 +8,9 @@ $medium-orchid: #ba55d3;
 $gray-hex-color: #bbb;
 $red: #f00;
 $dim-gray: #696969;
+$dark-slate-gray: #2f4f4f;
+$gainsboro: #dcdcdc;
+$green-yellow: #adff2f;
 
 body {
   padding-top: 60px;
@@ -139,3 +142,27 @@ input {
   margin-left: 0;
   width: auto;
 }
+
+.admin-sidebar {
+  background-color: $dark-slate-gray;
+  height: 700px;
+  margin-left: -1%;
+  margin-right: -5%;
+  margin-top: -19px;
+  position: fixed;
+  top: 70px;
+  z-index: 2;
+
+  ul {
+    margin-top: 20px;
+
+    a {
+      color: $gainsboro;
+    }
+
+    a:hover {
+      color: $green-yellow;
+    }
+  }
+}
+

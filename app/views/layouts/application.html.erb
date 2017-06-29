@@ -8,10 +8,10 @@
   </head>
   <body>
     <%= render "layouts/header" %>
-    <% flash.each do |message_type, message| %>
-      <%= content_tag :div, message, class: "alert alert-#{message_type} set-timeout" %>
-    <% end %>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag :div, message, class: "alert alert-#{message_type} set-timeout" %>
+      <% end %>
       <%= yield %>
       <%= render "layouts/footer" %>
     </div>
