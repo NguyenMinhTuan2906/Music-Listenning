@@ -13,11 +13,12 @@ gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.2"
 gem "jquery-rails"
 gem "jbuilder", "~> 2.5"
-gem "bootstrap-sass", "3.3.6"
+gem "bootstrap-sass"
 gem "config"
 gem "bcrypt"
 gem "will_paginate", "3.1.0"
 gem "bootstrap-will_paginate", "0.0.10"
+gem "font-awesome-rails"
 
 group :development, :test do
   gem "letter_opener"
