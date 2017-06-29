@@ -32,7 +32,11 @@
         <div class="panel-footer">
           <i class="glyphicon glyphicon-envelope"></i>
           <span class="pull-right">
-            <i class="glyphicon glyphicon-pencil" title="Edit Profile"></i>
+            <% if @user.is_user? current_user %>
+              <%= link_to edit_user_path(current_user) do %>
+                <i class="glyphicon glyphicon-pencil" title="Edit Profile"></i>
+              <% end %>
+            <% end %>
           </span>
         </div>
       </div>
