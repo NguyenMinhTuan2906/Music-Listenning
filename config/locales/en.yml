@@ -11,6 +11,8 @@ en:
   home: "Home"
   log_in: "Log in"
   error: "error"
+  log_out: "Log out"
+  sign_up_now: "Sign up now!"
   homes:
     help:
       help: "This is help page!"
@@ -31,3 +33,14 @@ en:
     error_messages:
       errors_contain: "The form contain"
   your_profile: "Profile User"
+  sessions:
+    new:
+      log_in: "Log in"
+      new_user: "New user? "
+      email: "Email:"
+      password: "Password:"
+    create:
+      invalid: "Wrong password or user name. Please try again!"
+      welcome: "Welcome back, "
+    destroy:
+      bye: "Good bye. See you again!"
