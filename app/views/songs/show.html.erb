@@ -1,0 +1,10 @@
+<% provide :title, @song.name %>
+<h1><%= @song.name %></h1>
+<div class="row col-md-4">
+<%= image_tag(@song.picture, class: "picture-song") %>
+
+  <audio controls>
+    <source src="<%= @song.file %>" type="audio/mpeg">
+  </audio>
+</div>
+

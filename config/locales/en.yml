@@ -20,6 +20,7 @@ en:
   not_admin: "Only Administrator can visit this page!"
   profile: "Profile"
   settings: "Settings"
+  upload: "Upload"
   homes:
     help:
       help: "This is help page!"
@@ -35,7 +36,7 @@ en:
       confirm: "Confirmation:"
       title: "Sign Up"
     create:
-      welcome: "Welcome to Music App"
+      welcome: "Welcome to Music App!"
     edit:
       title: "Edit profile"
     update:
@@ -71,3 +72,9 @@ en:
         genres: "Genres"
         songs: "Songs"
         view_details: "View details"
+  songs:
+    new:
+      title: "Upload New Song"
+      create: "Upload"
+    create:
+      song_upload: "Song Uploaded Successfully!"
