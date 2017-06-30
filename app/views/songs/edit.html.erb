@@ -1,5 +1,5 @@
 <% provide :title, t(".title") %>
-<% provide :submit, t("upload") %>
+<% provide :submit, t(".title") %>
 <h1><%= t ".title" %></h1>
 <div class="col-md-6 col-md-offset-3">
   <%= render partial: "song_form", locals: {song: @song, artists: @artists,

@@ -24,6 +24,10 @@
                     <td><%= t "email" %></td>
                     <td><%= @user.email %></td>
                   </tr>
+                  <tr>
+                    <td><%= t ".songs_uploaded" %></td>
+                    <td><%= @user.songs.size %></td>
+                  </tr>
                 </tbody>
               </table>
             </div>

@@ -35,26 +35,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-    if @user.destroy
-      flash[:success] = t ".delete"
-    else
-      flash[:danger] = t ".delete_fail"
-    end
-    redirect_to users_url
-  end
-
   private
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation
-  end
-
-  def load_user
-    @user = User.find_by id: params[:id]
-    return if @user
-    flash[:danger] = t "none"
-    redirect_to root_url
   end
 
   def correct_user

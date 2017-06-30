@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
     flash[:danger] = t "not_admin"
     redirect_to root_url
   end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user
+    flash[:danger] = t "none"
+    redirect_to root_url
+  end
 end
