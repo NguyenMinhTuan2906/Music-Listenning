@@ -7,4 +7,6 @@ class Song < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
+  validates :file, presence: true
+  validates :picture, presence: true
 end

@@ -11,7 +11,6 @@ en:
   log_in: "Log in"
   error: "error"
   log_out: "Log out"
-  sign_up_now: "Sign up now!"
   remember: "Remember me?"
   none: "There is no user that matches this id!"
   can_not: "You do not have permission to visit this page!"
@@ -21,6 +20,13 @@ en:
   profile: "Profile"
   settings: "Settings"
   upload: "Upload"
+  none_song: "There is no song that matches this id!"
+  email: "Email:"
+  name: "Name:"
+  your_song: "Your Song"
+  confirm: "Are You Sure?"
+  edit: "Edit"
+  delete: "Delete"
   homes:
     help:
       help: "This is help page!"
@@ -28,13 +34,11 @@ en:
       about: "This is about page!"
   users:
     new:
-      signup: "Sign Up"
-      create: "Sign Up"
-      name: "Username:"
-      email: "Email:"
       password: "Password:"
       confirm: "Confirmation:"
       title: "Sign Up"
+    show:
+      songs_uploaded: "Total uploaded songs:"
     create:
       welcome: "Welcome to Music App!"
     edit:
@@ -47,7 +51,6 @@ en:
   your_profile: "Profile User"
   sessions:
     new:
-      log_in: "Log in"
       new_user: "New user? "
       email: "Email:"
       password: "Password:"
@@ -73,8 +76,15 @@ en:
         songs: "Songs"
         view_details: "View details"
   songs:
+    index:
+      title: "All Songs"
     new:
       title: "Upload New Song"
-      create: "Upload"
     create:
       song_upload: "Song Uploaded Successfully!"
+    edit:
+      title: "Update Song"
+    update:
+      success: "Song has updated successfully!"
+    destroy:
+      delete: "Song has been successfully deleted!"

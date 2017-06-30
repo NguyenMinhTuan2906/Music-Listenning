@@ -1,0 +1,25 @@
+<li>
+  <div class="row col-md-4">
+    <%= link_to song.name, song_path(song) %>
+    <%= image_tag(song.picture, class: "picture-song") %>
+    <audio controls>
+      <source src="<%= song.file %>" type="audio/mpeg">
+    </audio>
+  </div>
+  <% if current_user == song.user %>
+    <div class="btn-group">
+      <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+        <i class="glyphicon glyphicon-cog"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <%= link_to t("edit"), edit_song_path(song) %>
+        </li>
+        <li>
+          <%= link_to t("delete"), song_path(song), method: :delete,
+            data: {confirm: t("confirm")} %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+</li>
