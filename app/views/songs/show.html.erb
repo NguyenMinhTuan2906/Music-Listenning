@@ -1,24 +1,50 @@
 <% provide :title, @song.name %>
-<h1><%= @song.name %></h1>
-<div class="row col-md-4">
-  <%= image_tag(@song.picture, class: "picture-song") %>
-  <audio controls>
-    <source src="<%= @song.file %>" type="audio/mpeg">
-  </audio>
+<div class="song-details">
+  <h3>
+    <span class="song-name"><%= @song.name %></span> -
+    <span class="song-artist"><%= @song.artist.name %></span>
+  </h3>
 </div>
-<% if current_user == @song.user %>
-  <div class="btn-group">
-    <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
-      <i class="glyphicon glyphicon-cog"></i>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <%= link_to t("edit"), edit_song_path(@song) %>
-      </li>
-      <li>
-        <%= link_to t("delete"), song_path(@song), method: :delete,
-          data: {confirm: t("confirm")} %>
-      </li>
-    </ul>
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag(@song.picture, class: "picture-song") %>
+    <audio controls>
+      <source src="<%= @song.file %>" type="audio/mpeg">
+    </audio>
+    <div class="detailBox">
+      <div class="titleBox">
+        <label><%= t "commentbox" %></label>
+      </div>
+      <div class="actionBox">
+        <ul class="commentList">
+          <%= render partial: "comments/comment", collection: @song.comments,
+            as: "comment" %>
+        </ul>
+        <% if current_user %>
+          <%= render partial: "comments/comment_form",
+            locals: {comment: @comment, song: @song} %>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+  <div class="col-md-6 song-lyric">
+    <p><%= t ".lyric" %></p>
+    <%= @song.lyric %>
+  </div>
+  <% if current_user == @song.user %>
+    <div class="btn-group col-md-2">
+      <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+        <i class="glyphicon glyphicon-cog"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <%= link_to t("edit"), edit_song_path(@song) %>
+        </li>
+        <li>
+          <%= link_to t("delete"), song_path(@song), method: :delete,
+            data: {confirm: t("confirm")} %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+</div>

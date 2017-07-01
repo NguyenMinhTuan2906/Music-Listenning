@@ -27,6 +27,10 @@ en:
   confirm: "Are You Sure?"
   edit: "Edit"
   delete: "Delete"
+  post_by: "Posted by "
+  ago: "ago."
+  add: "Add"
+  commentbox: "Comment Box"
   homes:
     help:
       help: "This is help page!"
@@ -88,3 +92,7 @@ en:
       success: "Song has updated successfully!"
     destroy:
       delete: "Song has been successfully deleted!"
+    show:
+      song_name: "Song Name: "
+      song_artist: "Artist: "
+      lyric: "Lyric :"

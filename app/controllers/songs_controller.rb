@@ -9,6 +9,8 @@ class SongsController < ApplicationController
   end
 
   def show
+    return unless current_user
+    @comment = current_user.comments.build
   end
 
   def new
@@ -48,7 +50,7 @@ class SongsController < ApplicationController
 
   private
   def song_params
-    params.require(:song).permit :name, :description, :file, :artist_id,
+    params.require(:song).permit :name, :lyric, :file, :artist_id,
       :genre_id, :picture
   end
 

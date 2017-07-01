@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20170630014328) do
 
   create_table "songs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.text     "description", limit: 65535
+    t.text     "lyric",       limit: 65535
     t.string   "file"
     t.float    "total_score", limit: 24
     t.integer  "user_id"
