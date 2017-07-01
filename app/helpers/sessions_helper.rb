@@ -44,13 +44,9 @@ module SessionsHelper
     redirect_to login_url
   end
 
-  def redirect_back_or
-    if session[:forwarding_url]
-      redirect_to session[:forwarding_url]
-    else
-      redirect_to root_path
-    end
-    session.delete(:forwarding_url)
+  def redirect_back_or default
+    redirect_to session[:forwarding_url] || default
+    session.delete :forwarding_url
   end
 
   def store_location
