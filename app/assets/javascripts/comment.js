@@ -11,10 +11,11 @@ $(document).ready(function() {
 
     .done(function(data) {
       $('.commentList').append(data.content);
+      $('.comments_size').html((parseInt($('.comments_size').text()) + 1));
     })
 
     .fail(function() {
-      alert('We got errors');
+      alert(I18n.t('javascript.comment_error'));
     });
     return false;
   });

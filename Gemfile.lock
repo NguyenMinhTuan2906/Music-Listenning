@@ -127,6 +127,8 @@ GEM
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
     i18n (0.8.4)
+    i18n-js (3.0.0)
+      i18n (~> 0.6, >= 0.6.6)
     ice_nine (0.11.2)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -332,6 +334,7 @@ DEPENDENCIES
   fabrication
   font-awesome-rails
   guard-rspec
+  i18n-js
   jbuilder (~> 2.5)
   jquery-rails
   jshint

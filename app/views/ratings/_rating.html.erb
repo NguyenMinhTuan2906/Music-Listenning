@@ -1,0 +1,6 @@
+<%= form_for rating do |f| %>
+  <input id="stars" value=<%= rating.score %> type="text" class="rating"
+    data-min=0 data-max=5 data-step=0.5 data-size="xs">
+  <%= f.hidden_field :song_id, id: "song_id" %>
+  <%= f.hidden_field :id, id: "rating_id" %>
+<% end %>

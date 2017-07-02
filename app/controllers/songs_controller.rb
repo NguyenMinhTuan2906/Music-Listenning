@@ -11,6 +11,7 @@ class SongsController < ApplicationController
   def show
     return unless current_user
     @comment = current_user.comments.build
+    @rating = @song.ratings.find_or_initialize_by user_id: current_user.id
   end
 
   def new
