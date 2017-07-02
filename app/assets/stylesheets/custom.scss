@@ -182,15 +182,14 @@ input {
   }
 }
 
-.song-lyric {
-  height: 200px;
+
+
+#song-lyric {
+  height: 150px;
   overflow: auto;
   width: 400px;
-
-  p {
-    color: $red;
-  }
 }
+
 
 .comment-content {
   margin-bottom: 0;

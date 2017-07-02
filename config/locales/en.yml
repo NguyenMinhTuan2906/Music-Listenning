@@ -31,6 +31,7 @@ en:
   ago: "ago."
   add: "Add"
   commentbox: "Comment Box"
+  rating_now: "Rating now?"
   homes:
     help:
       help: "This is help page!"
@@ -96,3 +97,6 @@ en:
       song_name: "Song Name: "
       song_artist: "Artist: "
       lyric: "Lyric :"
+  javascript:
+    comment_error: "We got errors when creating comment. Please try again!"
+    rating_warning: "You can only rate once!"

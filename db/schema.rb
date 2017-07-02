@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630014328) do
+ActiveRecord::Schema.define(version: 20170701084450) do
 
   create_table "artists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -48,15 +48,16 @@ ActiveRecord::Schema.define(version: 20170630014328) do
 
   create_table "songs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.text     "lyric",       limit: 65535
+    t.text     "lyric",         limit: 65535
     t.string   "file"
-    t.float    "total_score", limit: 24
+    t.float    "total_score",   limit: 24,    default: 0.0
     t.integer  "user_id"
     t.integer  "genre_id"
     t.integer  "artist_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.string   "picture"
+    t.integer  "rating_number",               default: 0
     t.index ["artist_id"], name: "index_songs_on_artist_id", using: :btree
     t.index ["genre_id"], name: "index_songs_on_genre_id", using: :btree
     t.index ["user_id"], name: "index_songs_on_user_id", using: :btree

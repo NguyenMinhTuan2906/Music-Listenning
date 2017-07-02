@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
         content: render_to_string(@comment)
       }, status: :ok
     else
-      render error, status: :unauthorized
+      render @comment.errors, status: :unauthorized
     end
   end
 

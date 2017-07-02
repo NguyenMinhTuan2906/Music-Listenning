@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :songs
   resources :comments, only: [:new, :create]
+  resources :ratings, only: [:new, :create, :show]
 
   namespace :admin do
     root "homes#index"
