@@ -3,5 +3,6 @@ class Admin::HomesController < ApplicationController
   layout "admin"
 
   def index
+    @supports = Supports::AdminCount.new
   end
 end

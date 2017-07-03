@@ -1,6 +1,8 @@
 username:
-  maximum: 10
+  maximum: 20
 email:
   maximum: 30
 password:
   minimum: 6
+paginate:
+  per_page: 5

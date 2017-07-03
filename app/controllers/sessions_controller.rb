@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :prevent_signup_loggin, only: [:new, :create]
+
   def new
   end
 

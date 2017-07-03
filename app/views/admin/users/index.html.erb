@@ -1,0 +1,23 @@
+<% provide :title, t(".manage_users") %>
+<% provide :placeholder, t(".search_user") %>
+<h1><%= t (".manage_users") %></h1>
+
+<%= form_tag admin_users_path, method: :get do %>
+  <%= render "shared/search" %>
+<% end %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th><%= t "name" %></th>
+        <th><%= t "uploaded_song" %></th>
+        <th><%= t "action" %></th>
+      </tr>
+    </thead>
+    <tbody class="user-table">
+      <%= render @users %>
+    </tbody>
+  </table>
+  <%= will_paginate %>
+</div>
