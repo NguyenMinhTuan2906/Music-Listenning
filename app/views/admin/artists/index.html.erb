@@ -1,0 +1,27 @@
+<% provide :title, t(".manage_artists") %>
+<% provide :placeholder, t(".search_artists") %>
+<h1><%= t (".manage_artists") %></h1>
+
+<%= form_tag admin_artists_path, method: :get do %>
+  <%= render "shared/search" %>
+<% end %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th><%= t "name" %></th>
+        <th><%= t "total_song" %></th>
+        <th><%= t "action" %></th>
+      </tr>
+    </thead>
+    <tbody class="list-table">
+      <%= render @artists %>
+    </tbody>
+  </table>
+  <div class=" plus-edit">
+    <i class="glyphicon glyphicon-plus"></i>
+    <%= link_to t(".add_artist"), new_admin_artist_path %>
+  </div>
+  <%= will_paginate %>
+</div>

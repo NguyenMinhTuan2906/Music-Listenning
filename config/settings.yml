@@ -8,3 +8,7 @@ paginate:
   per_page: 5
 genrename:
   maximum: 20
+songname:
+  maximum: 20
+artistname:
+  maximum: 20
