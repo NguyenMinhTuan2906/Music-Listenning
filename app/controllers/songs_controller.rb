@@ -68,7 +68,7 @@ class SongsController < ApplicationController
   end
 
   def correct_user_song
-    return if current_user == @song.user
+    return if current_user == @song.user || current_user.is_admin?
     flash[:danger] = t "can_not"
     redirect_to root_url
   end

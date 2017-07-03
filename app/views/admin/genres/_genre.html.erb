@@ -1,0 +1,14 @@
+<tr>
+  <td><%= @page * Settings.paginate.per_page + genre_counter - 4 %></td>
+  <td><%= link_to genre.name, admin_genre_path(genre) %></td>
+  <td><%= genre.songs.size %></td>
+  <td>
+    <%= link_to edit_admin_genre_path(genre) do %>
+      <span class="glyphicon glyphicon-pencil btn-xs btn-warning"></span>
+    <% end %>
+    <%= link_to admin_genre_path(genre), method: :delete,
+      data: {confirm: t("confirm")} do %>
+      <span class="glyphicon glyphicon-trash btn-xs btn-danger"></span>
+    <% end %>
+  </td>
+</tr>

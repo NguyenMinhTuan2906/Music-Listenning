@@ -1,0 +1,4 @@
+<% provide :title, t(".title") %>
+<h1><%= @genre.name %></h1>
+<h2><%= @genre.description %></h2>
+<%= render partial: "songs/song", collection: @songs, as: "song" %>

@@ -1,0 +1,27 @@
+<% provide :title, t(".manage_genres") %>
+<% provide :placeholder, t(".search_genres") %>
+<h1><%= t (".manage_genres") %></h1>
+
+<%= form_tag admin_genres_path, method: :get do %>
+  <%= render "shared/search" %>
+<% end %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th><%= t "name" %></th>
+        <th><%= t "total_song" %></th>
+        <th><%= t "action" %></th>
+      </tr>
+    </thead>
+    <tbody class="list-table">
+      <%= render @genres %>
+    </tbody>
+  </table>
+  <div class=" plus-edit">
+    <i class="glyphicon glyphicon-plus"></i>
+    <%= link_to t(".add_genre"), new_admin_genre_path %>
+  </div>
+  <%= will_paginate %>
+</div>
