@@ -7,13 +7,13 @@ class Admin::GenresController < ApplicationController
   def index
     if request.xhr?
       @genres = Genre.search(params[:name]).includes(:songs).select(:id, :name)
-        .order(name: :asc).paginate page: params[:page]
+        .order(name: :asc).paginate page: params[:page], per_page: Settings.paginate.per_page
       render json: {
         search_result: render_to_string(@genres)
       }, status: :ok
     else
       @genres = Genre.includes(:songs).select(:id, :name).order(name: :asc)
-        .paginate page: params[:page]
+        .paginate page: params[:page], per_page: Settings.paginate.per_page
     end
   end
 

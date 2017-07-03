@@ -186,12 +186,15 @@ input {
 
 
 
-#song-lyric {
-  height: 150px;
+.song-lyric {
+  height: 180px;
   overflow: auto;
   width: 400px;
 }
 
+.lyric {
+  color: $red;
+}
 
 .comment-content {
   margin-bottom: 0;

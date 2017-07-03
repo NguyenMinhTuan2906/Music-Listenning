@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     resources :users, except: [:edit, :update]
     resources :genres
     resources :artists
+    resources :songs, only: [:index, :destroy]
   end
 end

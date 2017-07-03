@@ -36,6 +36,7 @@ en:
   uploaded_song: "Uploaded:"
   search: "Search"
   total_song: "Total Song:"
+  manage: "Manager"
   homes:
     help:
       help: "This is help page!"
@@ -135,6 +136,14 @@ en:
       destroy:
         success: "Artist has been deleted!"
         fail: "Cannot delete this artist!"
+    songs:
+      index:
+        manage_songs: "Manage Songs"
+        search_songs: "Enter song name here..."
+        add_song: "Add new song"
+      destroy:
+        delete: "Song has been deleted!"
+        delete_fail: "Cannot delete this song!"
   songs:
     index:
       title: "All Songs"
