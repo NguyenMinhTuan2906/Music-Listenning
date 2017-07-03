@@ -14,6 +14,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "homes#index"
-    resources :users
+    resources :users, except: [:edit, :update]
   end
 end

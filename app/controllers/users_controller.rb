@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :load_user, except: [:new, :index, :create]
   before_action :logged_in_user, only: [:edit, :update, :index]
   before_action :correct_user, only: [:edit, :update]
-  before_action :prevent_signup, only: [:new, :create]
+  before_action :prevent_signup_loggin, only: [:new, :create]
   before_action :verify_admin!, only: [:index]
 
   def index
@@ -44,12 +44,6 @@ class UsersController < ApplicationController
   def correct_user
     return if @user.is_user? current_user
     flash[:danger] = t "can_not"
-    redirect_to root_url
-  end
-
-  def prevent_signup
-    return unless current_user
-    flash[:danger] = t "prevent_signup"
     redirect_to root_url
   end
 end

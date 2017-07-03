@@ -3,6 +3,16 @@ User.create! name: "Framgia",
   password: "123123",
   is_admin: true
 
+15.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "123123"
+  User.create! name: name,
+    email: email,
+    password: password,
+    password_confirmation: password
+end
+
 Genre.create! name: "Nhac Tre",
   description: "The loai nhac danh cho gioi tre voi tiet tau tre trung soi dong."
 

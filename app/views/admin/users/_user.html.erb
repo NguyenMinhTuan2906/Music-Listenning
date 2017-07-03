@@ -1,0 +1,11 @@
+<tr>
+  <td><%= @page * Settings.paginate.per_page + user_counter - 4 %></td>
+  <td><%= link_to user.name, user_path(user) %></td>
+  <td><%= user.songs.size %></td>
+  <td>
+    <%= link_to admin_user_path(user), method: :delete,
+      data: {confirm: t("confirm")} do %>
+      <span class="glyphicon glyphicon-trash btn-xs btn-danger"></span>
+    <% end %>
+  </td>
+</tr>

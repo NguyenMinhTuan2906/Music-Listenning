@@ -21,6 +21,7 @@ gem "bootstrap-will_paginate", "0.0.10"
 gem "font-awesome-rails"
 gem "carrierwave"
 gem "i18n-js"
+gem "faker"
 
 group :development, :test do
   gem "letter_opener"
