@@ -1,0 +1,26 @@
+<% provide :title, t(".manage_songs") %>
+<% provide :placeholder, t(".search_songs") %>
+<h1><%= t (".manage_songs") %></h1>
+
+<%= form_tag admin_songs_path, method: :get do %>
+  <%= render "shared/search" %>
+<% end %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th><%= t "name" %></th>
+        <th><%= t "action" %></th>
+      </tr>
+    </thead>
+    <tbody class="list-table">
+      <%= render @songs %>
+    </tbody>
+  </table>
+  <div class=" plus-edit">
+    <i class="glyphicon glyphicon-plus"></i>
+    <%= link_to t(".add_song"), new_song_path %>
+  </div>
+  <%= will_paginate %>
+</div>
