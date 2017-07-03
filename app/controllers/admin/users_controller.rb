@@ -1,5 +1,5 @@
 class Admin::UsersController < ApplicationController
-  before_action :verify_admin!, :logged_in_user
+  before_action :logged_in_user, :verify_admin!
   before_action :load_user, only: [:show, :destroy]
   before_action :load_page, only: [:index]
   layout "admin"

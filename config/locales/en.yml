@@ -35,6 +35,7 @@ en:
   action: "Action:"
   uploaded_song: "Uploaded:"
   search: "Search"
+  total_song: "Total Song:"
   homes:
     help:
       help: "This is help page!"
@@ -90,6 +91,25 @@ en:
       destroy:
         delete: "User has been successfully deleted!"
         delete_fail: "Cannot delete this user. Please try again!"
+    genres:
+      index:
+        manage_genres: "Manage Genres"
+        search_genres: "Enter genre name here..."
+        add_genre: "Add new genre"
+      new:
+        title: "New Genre"
+        create: "Create new genre"
+      genre_form:
+        genre_name: "Genre name:"
+        genre_description: "Genre description:"
+      create:
+        success: "Created new genre successfully!"
+        fail: "Cannot creating new genre!"
+      edit:
+        title: "Editing Genre"
+        edit: "Change"
+      show:
+        title: "Songs list"
   songs:
     index:
       title: "All Songs"

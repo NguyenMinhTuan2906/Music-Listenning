@@ -12,6 +12,8 @@ $dark-slate-gray: #2f4f4f;
 $gainsboro: #dcdcdc;
 $green-yellow: #adff2f;
 $dark-violet: #9400d3;
+$lime-green: #32cd32;
+$black: #000;
 
 body {
   padding-top: 60px;
@@ -208,5 +210,25 @@ input {
     .song-artist {
       color: $dark-violet;
     }
+  }
+}
+
+.submit {
+  margin-top: 15px;
+}
+
+.song-li {
+  list-style-type: none;
+}
+
+.btn-edit-song {
+  margin-top: 26px;
+}
+
+.plus-edit {
+  color: $lime-green;
+
+  a {
+    color: $black;
   }
 }

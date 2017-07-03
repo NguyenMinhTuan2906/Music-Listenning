@@ -6,3 +6,5 @@ password:
   minimum: 6
 paginate:
   per_page: 5
+genrename:
+  maximum: 20
