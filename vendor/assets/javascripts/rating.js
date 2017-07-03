@@ -319,7 +319,7 @@
                         params = [self.$element.val(), self._getCaption()];
                         self.starClicked = true;
                         if ($('#rating_id').val()) {
-                          alert('You can only rate once!');
+                          alert(I18n.t('javascript.rating_warning'));
                         } else {
                           $.ajax({
                             url: '/ratings/',
@@ -336,7 +336,7 @@
                               $('.current_rating').text(result.new_score);
                             },
                             error: function(result){
-                              alert(I18n.t('javascript.rating_warning'));
+                              alert(I18n.t('javascript.comment_error'));
                             }
                           });
                         }

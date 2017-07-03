@@ -98,7 +98,7 @@ en:
         add_genre: "Add new genre"
       new:
         title: "New Genre"
-        create: "Create new genre"
+        create: "Add new genre"
       genre_form:
         genre_name: "Genre name:"
         genre_description: "Genre description:"
@@ -110,6 +110,31 @@ en:
         edit: "Change"
       show:
         title: "Songs list"
+      destroy:
+        success: "Genre has been deleted!"
+        fail: "Cannot delete this genre!"
+    artists:
+      index:
+        manage_artists: "Manage Artists"
+        search_artists: "Enter artist name here..."
+        add_artist: "Add new artist"
+      new:
+        title: "New Artist"
+        create: "Add new artist"
+      artist_form:
+        artist_name: "Artist name:"
+        artist_description: "Artist description:"
+      create:
+        success: "Created new artist successfully!"
+        fail: "Cannot creating new artist!"
+      edit:
+        title: "Editing artist"
+        edit: "Change"
+      show:
+        title: "Songs list"
+      destroy:
+        success: "Artist has been deleted!"
+        fail: "Cannot delete this artist!"
   songs:
     index:
       title: "All Songs"
