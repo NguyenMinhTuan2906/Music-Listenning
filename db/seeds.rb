@@ -13,7 +13,7 @@ User.create! name: "Framgia",
     password_confirmation: password
 end
 
-Genre.create! name: "Nhac Tre",
+Genre.create! name: "Nhac Tre RnB",
   description: "The loai nhac danh cho gioi tre voi tiet tau tre trung soi dong."
 
 Genre.create! name: "Nhac Khong Loi",
@@ -21,6 +21,15 @@ Genre.create! name: "Nhac Khong Loi",
 
 Genre.create! name: "Nhac Nuoc Ngoai",
   description: "The loai nhac cua cac nuoc tren the gioi."
+
+Genre.create! name: "Nhac Cai Luong",
+  description: "The loai nhac buon, danh cho doi lua."
+
+Genre.create! name: "Nhac Rock",
+  description: "The loai nhac tiet tau nhanh, soi dong ruc lua."
+
+Genre.create! name: "Nhac Cach Mang",
+  description: "The loai nhac sang tac trong chien tranh Dong Duong"
 
 Artist.create! name: "Faker",
   description: "Best Singer of 2017"

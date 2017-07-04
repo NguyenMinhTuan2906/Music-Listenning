@@ -16,7 +16,9 @@
       </div>
       <a href="#">
         <div class="panel-footer">
-          <span class="pull-left"><%= t ".view_details" %></span>
+          <span class="pull-left">
+            <%= link_to t(".view_details"), admin_genres_path %>
+          </span>
           <span class="pull-right">
             <i class="fa fa-arrow-circle-right"></i>
           </span>
@@ -40,7 +42,9 @@
       </div>
       <a href="#">
         <div class="panel-footer">
-          <span class="pull-left"><%= t ".view_details" %></span>
+          <span class="pull-left">
+            <%= link_to t(".view_details"), admin_songs_path %>
+          </span>
           <span class="pull-right">
             <i class="fa fa-arrow-circle-right"></i>
           </span>
@@ -64,7 +68,9 @@
       </div>
       <a href="#">
         <div class="panel-footer">
-          <span class="pull-left"><%= t ".view_details" %></span>
+          <span class="pull-left">
+            <%= link_to t(".view_details"), admin_artists_path %>
+          </span>
           <span class="pull-right">
             <i class="fa fa-arrow-circle-right"></i>
           </span>
@@ -88,7 +94,9 @@
       </div>
       <a href="#">
         <div class="panel-footer">
-          <span class="pull-left"><%= t ".view_details" %></span>
+          <span class="pull-left">
+            <%= link_to t(".view_details"), admin_users_path %>
+          </span>
           <span class="pull-right">
             <i class="fa fa-arrow-circle-right"></i>
           </span>

@@ -1,5 +1,19 @@
-<div class="center jumbotron">
+<div class="center jumbotron back-ground">
   <h1><%= t "welcome" %></h1>
   <h2><%= t "homepage" %></h2>
-  <%= link_to t("signup"), signup_path, class: "btn btn-lg btn-primary" %>
+  <% unless current_user %>
+    <%= link_to t("signup"), signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
+<% @genres.each do |genre| %>
+  <% if genre.songs.any? %>
+    <div class="row container">
+      <%= link_to genre_path(genre) do %>
+        <button class="btn btn-success btn-lg"><%= genre.name %></button>
+      <% end %>
+    </div>
+    <div class="row">
+      <%= render partial: "shared/song_list", collection: genre.songs.limit(3), as: "song" %>
+    </div>
+  <% end %>
+<% end %>

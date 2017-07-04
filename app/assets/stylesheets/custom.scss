@@ -34,6 +34,10 @@ textarea {
     color: $medium-orchid;
     margin-bottom: 10px;
   }
+
+  h2 {
+    color: $red;
+  }
 }
 
 h1 {
@@ -234,4 +238,30 @@ input {
   a {
     color: $black;
   }
+}
+
+.custom-search-input {
+  margin-top: 8px;
+}
+
+.search-index {
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  li {
+    color: $red;
+
+    span {
+      color: $black;
+      font-style: italic;
+    }
+  }
+}
+
+.red-mark {
+  color: $red;
+}
+
+.back-ground {
+  background-image: url(music.png);
 }

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root "homes#home"
-  get "/help", to: "homes#help"
   get "/about", to: "homes#about"
   get "/contact", to: "homes#contact"
   get "/signup", to: "users#new"
@@ -11,6 +10,7 @@ Rails.application.routes.draw do
   resources :songs
   resources :comments, only: [:new, :create]
   resources :ratings, only: [:new, :create, :show]
+  resources :genres
 
   namespace :admin do
     root "homes#index"

@@ -7,15 +7,9 @@
       <div class="col-md-9">
         <nav>
           <div class="row">
-            <div class="col-md-6">
-              <%= form_tag songs_path, method: :get do %>
-                <%= render "shared/search" %>
-              <% end %>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
               <ul class="nav navbar-nav navbar-right">
               <li><%= link_to t("home"), root_path %></li>
-              <li><%= link_to t("genre"), genres_path %></li>
               <% if logged_in? %>
                 <li><%= link_to t("upload"), new_song_path %></li>
                 <% if current_user.is_admin? %>

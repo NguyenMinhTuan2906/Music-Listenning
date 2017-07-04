@@ -12,6 +12,7 @@ $(document).ready(function() {
     .done(function(data) {
       $('.commentList').append(data.content);
       $('.comments_size').html((parseInt($('.comments_size').text()) + 1));
+      $('#comment_content').val('');
     })
 
     .fail(function() {

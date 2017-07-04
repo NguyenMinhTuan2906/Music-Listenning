@@ -1,4 +1,7 @@
 <% provide :title, t(".title") %>
 <h1><%= @artist.name %></h1>
 <h2><%= @artist.description %></h2>
-<%= render partial: "songs/song", collection: @songs, as: "song" %>
+<div class="row">
+  <%= render partial: "shared/song_list", collection: @songs, as: "song" %>
+</div>
+<%= will_paginate @songs %>

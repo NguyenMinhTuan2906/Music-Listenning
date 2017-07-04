@@ -9,6 +9,6 @@ paginate:
 genrename:
   maximum: 20
 songname:
-  maximum: 20
+  maximum: 30
 artistname:
   maximum: 20

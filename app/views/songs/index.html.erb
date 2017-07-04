@@ -1,7 +1,17 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
 <div class="row">
-  <ul class="songs-list">
-    <%= render @songs %>
-  </ul>
+  <% if @songs.present? %>
+    <%= render partial: "shared/song_list", collection: @songs, as: "song" %>
+  <% else %>
+    <h4><%= t "no_result" %> <span class="red-mark"><%= params[:q] %></span></h4>
+    <ul class="search-index">
+      <%= t ".suggest" %>
+      <li><span><%= t ".suggest1" %></span></li>
+      <li><span><%= t ".suggest2" %></span></li>
+      <li><span><%= t ".suggest3" %></span></li>
+      <li><span><%= t ".suggest4" %></span></li>
+    </ul>
+  <% end %>
 </div>
+<%= will_paginate %>

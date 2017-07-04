@@ -18,7 +18,9 @@ class Admin::ArtistsController < ApplicationController
   end
 
   def show
-    @songs = @artist.songs.paginate page: params[:page],
+    @songs = @artist.songs.includes(:artist, :genre)
+      .select(:id, :name, :artist_id, :user_id, :genre_id, :picture, :file, :total_score)
+      .order(name: :asc).paginate page: params[:page],
       per_page: Settings.paginate.per_page
   end
 
