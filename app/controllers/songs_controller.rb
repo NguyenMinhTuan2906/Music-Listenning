@@ -1,11 +1,28 @@
 class SongsController < ApplicationController
-  before_action :logged_in_user, except: [:show]
+  before_action :logged_in_user, except: [:show, :index]
   before_action :load_artist_genre, except: [:show, :index, :destroy]
   before_action :load_song, except: [:index, :new, :create]
   before_action :correct_user_song, only: [:edit, :update, :destroy]
 
   def index
-    @songs = current_user.songs
+    if params[:q]
+      @songs = Song.search(params[:q]).includes(:artist, :genre)
+        .select(:id, :name, :artist_id, :user_id, :genre_id, :picture, :file, :total_score)
+        .order(name: :asc).paginate page: params[:page],
+        per_page: Settings.paginate.per_page
+    else
+      if current_user
+        @songs = current_user.songs.includes(:artist, :genre)
+          .select(:id, :name, :artist_id, :genre_id, :user_id, :picture, :file, :total_score)
+          .order(name: :asc).paginate page: params[:page],
+          per_page: Settings.paginate.per_page
+      else
+        @songs = Song.includes(:artist, :genre)
+        .select(:id, :name, :artist_id, :user_id, :genre_id, :picture, :file, :total_score)
+        .order(name: :asc).paginate page: params[:page],
+        per_page: Settings.paginate.per_page
+      end
+    end
   end
 
   def show

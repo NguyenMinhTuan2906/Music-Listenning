@@ -1,0 +1,18 @@
+<div class="col-sm-4 col-lg-4 col-md-4">
+  <div class="thumbnail">
+    <%= link_to image_tag(song.picture), song_path(song) %>
+    <div class="caption">
+      <h4>
+        <%= link_to song.name, song_path(song) %>
+      </h4>
+      <p><%= song.artist.name %></p>
+    </div>
+    <div class="ratings">
+      <p class="pull-right"><%= song.comments.size %> <%= t "comment" %></p>
+      <p>
+        <%= song.total_score.round(2) %>
+        <span class="glyphicon glyphicon-star"></span>
+      </p>
+    </div>
+  </div>
+</div>

@@ -37,6 +37,9 @@ en:
   search: "Search"
   total_song: "Total Song:"
   manage: "Manager"
+  genre: "Genre"
+  no_result: "No result was found for keyword: "
+  comment: "comments"
   homes:
     help:
       help: "This is help page!"
@@ -147,6 +150,13 @@ en:
   songs:
     index:
       title: "All Songs"
+      total: "There are total"
+      song: "songs:"
+      suggest: "Try our suggestions:"
+      suggest1: "Please make sure all words are spelled correctly."
+      suggest2: "Try different keywords."
+      suggest3: "Try more general keywords."
+      suggest4: "Try fewer keywords."
     new:
       title: "Upload New Song"
     create:
@@ -164,3 +174,12 @@ en:
   javascript:
     comment_error: "We got errors when creating comment. Please try again!"
     rating_warning: "You can only rate once!"
+    rating_error: "We got errors when rating. Please try again!"
+    thank_for_rated: "Thank for rating! Have a nice day!"
+  genres:
+    show:
+      title: "Song lists"
+    index:
+      all_genres: "All Genres"
+    genre:
+      song: "songs"

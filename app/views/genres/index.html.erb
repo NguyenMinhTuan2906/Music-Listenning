@@ -1,0 +1,6 @@
+<% provide :title, t(".all_genres") %>
+<h1><%= t ".all_genres" %></h1>
+<ul class="songs-list">
+  <%= render @genres %>
+</ul>
+<%= will_paginate %>

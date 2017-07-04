@@ -5,14 +5,18 @@ class Admin::SongsController < ApplicationController
 
   def index
     if request.xhr?
-      @songs = Song.search(params[:name]).select(:id, :name).order(name: :asc)
-        .paginate page: params[:page], per_page: Settings.paginate.per_page
+      @songs = Song.search(params[:name]).includes(:artist, :genre)
+        .select(:id, :name, :artist_id, :user_id, :genre_id, :picture, :file)
+        .order(name: :asc).paginate page: params[:page],
+        per_page: Settings.paginate.per_page
       render json: {
         search_result: render_to_string(@songs)
       }, status: :ok
     else
-      @songs = Song.select(:id, :name).order(name: :asc)
-        .paginate page: params[:page], per_page: Settings.paginate.per_page
+      @songs = Song.includes(:artist, :genre)
+        .select(:id, :name, :artist_id, :user_id, :genre_id, :picture, :file)
+        .order(name: :asc).paginate page: params[:page],
+        per_page: Settings.paginate.per_page
     end
   end
 

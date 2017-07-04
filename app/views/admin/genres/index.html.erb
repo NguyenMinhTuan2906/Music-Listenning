@@ -2,9 +2,14 @@
 <% provide :placeholder, t(".search_genres") %>
 <h1><%= t (".manage_genres") %></h1>
 
-<%= form_tag admin_genres_path, method: :get do %>
-  <%= render "shared/search" %>
-<% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_tag admin_genres_path, method: :get do %>
+      <%= render "shared/search" %>
+    <% end %>
+  </div>
+</div>
+
 <div class="container">
   <table class="table">
     <thead>

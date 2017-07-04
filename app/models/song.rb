@@ -7,7 +7,7 @@ class Song < ApplicationRecord
   mount_uploader :file, FileUploader
   mount_uploader :picture, PictureUploader
 
-  validates :name, presence: true, uniqueness: {case_sensitive: false},
+  validates :name, presence: true,
     length: {maximum: Settings.songname.maximum}
   validates :lyric, presence: true
   validates :file, presence: true

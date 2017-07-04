@@ -334,9 +334,10 @@
                             success: function(result){
                               $('#rating_id').val(result.rating_id);
                               $('.current_rating').text(result.new_score);
+                              alert(I18n.t('javascript.thank_for_rated'));
                             },
                             error: function(result){
-                              alert(I18n.t('javascript.comment_error'));
+                              alert(I18n.t('javascript.rating_error'));
                             }
                           });
                         }
