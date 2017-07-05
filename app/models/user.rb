@@ -13,7 +13,7 @@ class User < ApplicationRecord
     allow_nil: true
   has_secure_password
 
-  scope :reject_admin, ->{where "is_admin = 0"}
+  scope :reject_admin, ->{where is_admin: false}
   scope :search, ->search{where "name LIKE ?", "%#{search}%"}
 
   class << self

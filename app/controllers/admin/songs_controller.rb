@@ -27,6 +27,6 @@ class Admin::SongsController < ApplicationController
     else
       flash[:danger] = t ".delete_fail"
     end
-    redirect_to admin_users_url
+    redirect_to admin_songs_url
   end
 end

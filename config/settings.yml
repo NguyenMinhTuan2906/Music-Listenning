@@ -1,5 +1,5 @@
 username:
-  maximum: 20
+  maximum: 40
 email:
   maximum: 30
 password:
