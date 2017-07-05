@@ -112,6 +112,8 @@ en:
       edit:
         title: "Editing Genre"
         edit: "Change"
+      update:
+        success: "Genre has been updated!"
       show:
         title: "Songs list"
       destroy:
@@ -134,6 +136,8 @@ en:
       edit:
         title: "Editing artist"
         edit: "Change"
+      update:
+        success: "Artist has been updated!"
       show:
         title: "Songs list"
       destroy:
