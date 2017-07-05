@@ -180,6 +180,7 @@ en:
     rating_warning: "You can only rate once!"
     rating_error: "We got errors when rating. Please try again!"
     thank_for_rated: "Thank for rating! Have a nice day!"
+    please_enter: "Comment must not be blank!"
   genres:
     show:
       title: "Song lists"
