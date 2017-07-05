@@ -1,6 +1,3 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-
 .detailBox {
     width:320px;
     border:1px solid #bbb;
